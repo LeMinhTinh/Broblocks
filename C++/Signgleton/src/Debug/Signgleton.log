@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\ontap\signgleton\src\employee.h(35): warning C4553: '==': operator has no effect; did you intend '='?
+  Signgleton.vcxproj -> D:\OnTap\Signgleton\Debug\Signgleton.exe
+  Signgleton.vcxproj -> D:\OnTap\Signgleton\Debug\Signgleton.pdb (Partial PDB)
