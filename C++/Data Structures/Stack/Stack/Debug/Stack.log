@@ -1,0 +1,9 @@
+﻿  main.cpp
+  Generating Code...
+  Compiling...
+  StackUsingTemplate.cpp
+  Generating Code...
+main.obj : error LNK2019: unresolved external symbol "public: __thiscall StackUsingTemplate<double>::StackUsingTemplate<double>(void)" (??0?$StackUsingTemplate@N@@QAE@XZ) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: double __thiscall StackUsingTemplate<double>::Pop(void)" (?Pop@?$StackUsingTemplate@N@@QAENXZ) referenced in function _main
+main.obj : error LNK2019: unresolved external symbol "public: void __thiscall StackUsingTemplate<double>::Push(double)" (?Push@?$StackUsingTemplate@N@@QAEXN@Z) referenced in function _main
+D:\OnTap\GitHub\Broblocks\C++\Data Structures\Stack\Debug\Stack.exe : fatal error LNK1120: 3 unresolved externals
