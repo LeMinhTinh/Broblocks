@@ -3,10 +3,10 @@
 
 #include <QWidget>
 
-class SecondWindow
+class WashWindow
 {
 public:
-    SecondWindow();
+    WashWindow();
 };
 
 #endif // SECONDWINDOW_H

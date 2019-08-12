@@ -28,7 +28,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer,SIGNAL(timeout()),this,SLOT(showTime()));
     timer->start();
 
-
     QString washButtonname = "Wash";
     washButton = new QPushButton(washButtonname, this);
     QString dryname = "Dry";
@@ -39,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(washButton, SIGNAL(clicked(bool)), this, SLOT(on_washButton_clicked()));
     connect(wasndryButton, SIGNAL(clicked(bool)), this, SLOT(on_wasndryButton_clicked()));
     connect(dryButton, SIGNAL(clicked(bool)), this, SLOT(on_dryButton_clicked()));
+
     showMainLayoutScren();
 }
 
