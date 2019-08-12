@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-08-11T10:45:25
+# Project created by QtCreator 2019-08-07T09:08:38
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Example1
+TARGET = Siemens
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,16 +25,33 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        baseheadersetting.cpp \
+        dry.cpp \
+        headersetting.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        washanddry.cpp \
+        washscreen.cpp
 
 HEADERS += \
-        mainwindow.h
+        baseheadersetting.h \
+        dry.h \
+        headersetting.h \
+        mainwindow.h \
+        washanddry.h \
+        washscreen.h
 
 FORMS += \
-        mainwindow.ui
+        baseheadersetting.ui \
+        dry.ui \
+        mainwindow.ui \
+        washanddry.ui \
+        washscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc
