@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>Image/backicon.png</file>
+        <file>Image/bluetooth.png</file>
+        <file>Image/charging.png</file>
+        <file>Image/keyicon.png</file>
+        <file>Image/settingicon.png</file>
+        <file>Image/wifiicon.png</file>
+    </qresource>
+</RCC>
