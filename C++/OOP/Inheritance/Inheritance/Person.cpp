@@ -2,11 +2,14 @@
 #include "Person.h"
 
 
-Person::Person(int _age, string _name, string _job)
+Person::Person(int _age, string _name)
 {
 	age = _age;
 	name = _name;
-	job = _job;
+}
+
+Person::Person()
+{
 }
 
 int Person::getAge()
@@ -29,12 +32,3 @@ void Person::setName(string _name)
 	_name = name;
 }
 
-string Person::getJob()
-{
-	return job.c_str();
-}
-
-void Person::setJob(string _job)
-{
-	_job = job;
-}

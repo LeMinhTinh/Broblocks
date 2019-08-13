@@ -7,18 +7,18 @@ using namespace std;
 class Person
 {
 protected:
+	
+public:
 	int age;
 	string name;
 	string job;
-public:
-	Person(int _age, string _name, string _job);
 
+	Person(int _age, string _name);
+	Person();
 	int getAge();
 	void setAge(int _age);
 
 	string getName();
 	void setName(string _name);
 
-	string getJob();
-	void setJob(string _job);
 };
