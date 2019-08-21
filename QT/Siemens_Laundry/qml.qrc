@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>StatusBar.qml</file>
+        <file>ProgrameList.qml</file>
+        <file>res/icon/bluetooch-icon.png</file>
+        <file>res/icon/charging-icon.png</file>
+        <file>res/icon/key-icon.png</file>
+        <file>res/icon/setting-icon.png</file>
+        <file>res/icon/wifi-icon.png</file>
+        <file>ProgrameElement.qml</file>
+        <file>res/icon/back-icon.png</file>
+        <file>res/icon/Dry-img.png</file>
+        <file>res/icon/washing-drying-img.png</file>
+        <file>res/icon/Washing-img.png</file>
+        <file>ProgrameSubList.qml</file>
+        <file>Example.qml</file>
+        <file>Button.qml</file>
+        <file>ProgrameLibrary.qml</file>
+        <file>ProgrameInformation.qml</file>
+        <file>res/icon/loading-icon.png</file>
+    </qresource>
+</RCC>
