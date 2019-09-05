@@ -4,7 +4,6 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
 Item {
-    id: statusBar
     width: 1280 //parent.width
     height: 554/7 //parent.height/5
 //    border.width: 1
@@ -13,11 +12,23 @@ Item {
 
     property int iconWidth: 80
     property int iconHeight: 50
-    property string sysTime: "12:31"
+    property string sysTime: Qt.formatTime(new Date(),"hh:mm")
     property string modeName: ""
     property string backButtonText: ""
     property int modeNameFontSize: 40
     property int sysTimeFontSize: 35
+
+    Timer {
+        id: timer
+        interval: 60000
+        repeat: true
+        running: true
+
+        onTriggered:
+        {
+            sysTime = Qt.formatTime(new Date(),"hh:mm")
+        }
+    }
 
     RowLayout {
         anchors.fill: parent
@@ -28,6 +39,7 @@ Item {
             height: parent.height
             width: 100
             clip: true
+            radius: 5
 //            border.color: "black"
 //            border.width: 1
 
@@ -51,7 +63,7 @@ Item {
         }
 
         Rectangle {
-            width: parent.width - backButton.width
+            width: parent.width - backButton.width - 30
             height: parent.height
 //            border.color: "black"
 //            border.width: 1
@@ -74,7 +86,12 @@ Item {
                         width: parent.width
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
-                        source: "res/icon/setting-icon.png"
+                        source: "../res/icon/setting-icon.png"
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: popupLoader.source = "../screen/Popup_Setting.qml"
                     }
                 }
 
@@ -110,7 +127,7 @@ Item {
                         width: parent.width
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
-                        source: "res/icon/wifi-icon.png"
+                        source: "../res/icon/wifi-icon.png"
                     }
                 }
 
@@ -127,7 +144,7 @@ Item {
                         width: parent.width
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
-                        source: "res/icon/bluetooch-icon.png"
+                        source: "../res/icon/bluetooch-icon.png"
                     }
                 }
 
@@ -144,7 +161,7 @@ Item {
                         width: parent.width
                         height: parent.height
                         fillMode: Image.PreserveAspectFit
-                        source: "res/icon/charging-icon.png"
+                        source: "../res/icon/charging-icon.png"
                     }
                 }
 
@@ -174,57 +191,3 @@ Item {
         }
     }
 }
-
-
-//    Image {
-//        id: wifi
-//        x: 954
-//        y: 5
-//        height: statusBar.height-10
-//        width: height
-//        anchors.right: parent.right
-//        fillMode: Image.PreserveAspectFit
-//        source: "res/icon/wifi-icon.png"
-//        anchors.rightMargin: 257
-//        clip: false
-//    }
-
-//    Image {
-//        id: bluetooth
-//        x: 879
-//        y: 5
-//        height: statusBar.height-10
-//        width: height
-//        anchors.right: parent.right
-//        fillMode: Image.PreserveAspectFit
-//        source: "res/icon/bluetooch-icon.png"
-//        anchors.rightMargin: 332
-//        clip: false
-//    }
-
-//    Image {
-//        id: charging
-//        x: 804
-//        y: 5
-//        height: statusBar.height-10
-//        width: height
-//        anchors.right: parent.right
-//        fillMode: Image.PreserveAspectFit
-//        source: "res/icon/charging-icon.png"
-//        anchors.rightMargin: 407
-//        clip: false
-//    }
-
-//    Label {
-//        id: time
-//        x: 1029
-//        y: 8
-//        width: 168
-//        height: statusBar.height-10
-//        text: qsTr("12:30")
-//        anchors.verticalCenterOffset: 0
-//        horizontalAlignment: Text.AlignHCenter
-//        verticalAlignment: Text.AlignVCenter
-//        font.pointSize: 40
-//        anchors.verticalCenter: parent.verticalCenter
-//    }

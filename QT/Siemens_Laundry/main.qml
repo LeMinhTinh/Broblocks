@@ -1,6 +1,9 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
+import "common"
+import "dummy"
+import "screen"
 
 Window {
     id: mainWindow
@@ -8,43 +11,62 @@ Window {
     /*Application width and height should be takend from device configuration*/
     width: 1280
     height: 544
-    title: qsTr("Seimens Laundry")
+//    title: qsTr("Seimens Laundry")
 
-//    background: Rectangle {
-//        color: "#FFFFEF"
-//        gradient: Gradient {
-//            GradientStop { position: 0.0; color: "white" }
-//            GradientStop { position: 1.0; color: "light grey" }
-//        }
-//    }
-    Column {
+    /*Connected signal*/
+    //signal pageChangeTo(string pageName)
+    Column{
         anchors.fill: parent
 
-
-        StatusBar {
-            id: siemenStatusBar
-//            anchors {
-//                left: parent.left
-//                top: parent.top
-//            }
-            backButtonText: stackView.depth > 1 ? "\u25C0" : ""
-
+        StatusBar{
+            id: statusBar
             onBackbtn_clicked: {
-                if (stackView.depth > 1){
-                    stackView.pop()
-                }
-                else{
-                    stackView.push("ProgrameSubList.qml")
-                }
+                console.log("Back button clicked")
+                mainLoader.source="screen/Scr_ModeSelection.qml"
             }
         }
 
-
-        StackView {
-            id: stackView
+        Loader {
+            id: mainLoader
             width: 1280
-            height: 554 - 554/6
-            initialItem: "ProgrameList.qml"
+            height: 554 - 554/7
+            source: "screen/Scr_ModeSelection.qml"
         }
     }
+
+    Loader {
+        id: popupLoader
+        anchors.fill: parent
+        source: ""
+    }
+
+    Connections {
+        target: mainLoader.item
+        onPageChangeTo:{
+            mainLoader.source = pageName
+            statusBar.modeName = "Wash"
+            statusBar.backButtonText = "\u25C0"
+        }
+    }
+
+    Connections {
+        target: popupLoader.item
+        onClosePopup:{
+            popupLoader.source = ""
+        }
+    }
+
 }
+
+//    StackView {
+//        anchors.fill: parent
+//        id: stackView
+//        initialItem: "Scr_ModeSelection.qml"
+//    }
+
+//    Connections{
+//        target: stackView.currentItem
+//        onPageChangeTo:{
+//            stackView.push(pageName)
+//        }
+//    }

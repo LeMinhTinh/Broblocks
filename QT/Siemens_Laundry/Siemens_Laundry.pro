@@ -44,3 +44,6 @@ HEADERS += \
     ProgramSetting.h
 
 DISTFILES +=
+
+STATECHARTS += \
+    ScreenSC.scxml

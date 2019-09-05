@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="ScreenSC" qt:editorversion="4.9.1" initial="HomeScreen">
+    <qt:editorinfo initialGeometry="-14.63;57.73;-20;-20;40;40"/>
+    <state id="HomeScreen">
+        <qt:editorinfo geometry="155.83;57.73;-106;-50;166;100" scenegeometry="155.83;57.73;49.83;7.73;166;100"/>
+        <transition type="external" event="onGotoModeSelection" target="Scr_ModeSelection">
+            <qt:editorinfo movePoint="36.75;6.12"/>
+        </transition>
+    </state>
+    <state id="Scr_ModeSelection">
+        <qt:editorinfo geometry="21.10;251.87;-60;-50;339.68;227.62" scenegeometry="21.10;251.87;-38.90;201.87;339.68;227.62"/>
+        <transition type="external" event="onGotoProgramSelection" target="Scr_ProgramSelection">
+            <qt:editorinfo movePoint="40.83;0"/>
+        </transition>
+    </state>
+    <state id="Scr_ProgramSelection">
+        <qt:editorinfo geometry="120.73;623.93;-159.29;-88.79;339;217.38" scenegeometry="120.73;623.93;-38.56;535.14;339;217.38"/>
+        <transition type="external" event="onGotoProgramSetting" target="Scr_ProgramSetting"/>
+        <transition type="external" event="onStart" target="Scr_Operate">
+            <qt:editorinfo movePoint="36.75;9.19"/>
+        </transition>
+    </state>
+    <state id="Scr_ProgramSetting">
+        <qt:editorinfo geometry="612.02;634.65;-155.13;-104.60;338.91;227.56" scenegeometry="612.02;634.65;456.89;530.05;338.91;227.56"/>
+        <transition type="external" event="onStart" target="Scr_Operate">
+            <qt:editorinfo movePoint="42.87;3.06"/>
+        </transition>
+    </state>
+    <state id="Scr_Operate">
+        <qt:editorinfo geometry="181.93;935.22;30.32;-76.38;436.50;294.57" scenegeometry="181.93;935.22;212.25;858.84;436.50;294.57"/>
+        <transition type="external" event="onPause" target="Scr_RinseHold">
+            <qt:editorinfo movePoint="36.60;13.18"/>
+        </transition>
+    </state>
+    <state id="Scr_RinseHold">
+        <qt:editorinfo geometry="818.89;1006.13;-60;-50;120;100" scenegeometry="818.89;1006.13;758.89;956.13;120;100"/>
+    </state>
+    <datamodel>
+        <data/>
+    </datamodel>
+    <state id="running">
+        <qt:editorinfo geometry="338.21;1038.05;-60;-50;120;100" scenegeometry="338.21;1038.05;278.21;988.05;120;100"/>
+        <transition type="external" event="onFinish" target="finished">
+            <qt:editorinfo movePoint="2.93;30.75"/>
+        </transition>
+    </state>
+    <state id="finished">
+        <qt:editorinfo geometry="528.55;1036.50;-60;-50;120;100" scenegeometry="528.55;1036.50;468.55;986.50;120;100"/>
+    </state>
+</scxml>
