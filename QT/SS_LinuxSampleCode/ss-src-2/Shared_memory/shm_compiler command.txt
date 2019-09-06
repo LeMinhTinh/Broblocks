@@ -1,0 +1,19 @@
+Compiler command: gcc shm_producer.c -o shm_producer.o
+                  gcc shm_consumer.c -o shm_consumer.o
+                  ./shm_consumer.o &
+                  ./shm_producer.o
+
+[ns@localhost Desktop]$ ./consumer.o &
+Memory attached at B7F40000
+[1] 4112
+[ns@localhost Desktop]$ ./producer.o
+Memory attached at B80A7000
+Enter some text: bangalore
+You wrote: bangalore
+waiting for client...
+waiting for client...
+Enter some text: Mangalore
+You wrote: Mangalore
+waiting for client...
+ end
+
