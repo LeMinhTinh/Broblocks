@@ -1,0 +1,24 @@
+---- ModalOverlay Matches (14 in 2 files) ----
+main.qml line 340 :                 ModalOverlayBox {
+main.qml line 341 :                     id: modalOverlay
+RunningScreen.qml line 61 :         if (preHeatingMessageQueued && !modalOverlay.content)
+RunningScreen.qml line 63 :         else if (doneMessageQueued && !modalOverlay.content)
+RunningScreen.qml line 102 :         target: modalOverlay
+RunningScreen.qml line 109 :             modalOverlay.open(boxInput.getRemainingTimeOption())
+RunningScreen.qml line 114 :         modalOverlay.open(boxInput.getFinishOptions(), function() { display.pop(display.get(1)) })
+RunningScreen.qml line 119 :         modalOverlay.open(boxInput.getFinishText(program.definition.temperature.value()), function() { preHeatingMessageQueued = false }, true, 650, 238)
+RunningScreen.qml line 194 : //                    modalOverlay.open(boxInput.getTemperatureOptions())
+RunningScreen.qml line 213 : //                    modalOverlay.open(boxInput.getTemperatureOptions())
+RunningScreen.qml line 252 : //                onClicked: modalOverlay.open(boxInput.getSteamOption())
+RunningScreen.qml line 272 : //                    modalOverlay.open(boxInput.getMicrowaveOption())
+RunningScreen.qml line 315 : //                    modalOverlay.open(boxInput.getRemainingTimeOption())
+RunningScreen.qml line 445 :             modalOverlay.close()
+---- ModalOverlay Search Errors Encountered (7) ----
+The following 7 files could not be processed:
+C:\Users\Sunjie2\FirstQtApp\resources\ui\qtapp.si4project\qtapp.siproj : File could not be opened.
+C:\Users\Sunjie2\FirstQtApp\resources\ui\qtapp.si4project\qtapp.sip_sym : File could not be opened.
+C:\Users\Sunjie2\FirstQtApp\resources\ui\qtapp.si4project\qtapp.sip_xab : File could not be opened.
+C:\Users\Sunjie2\FirstQtApp\resources\ui\qtapp.si4project\qtapp.sip_xad : File could not be opened.
+C:\Users\Sunjie2\FirstQtApp\resources\ui\qtapp.si4project\qtapp.sip_xm : File could not be opened.
+C:\Users\Sunjie2\FirstQtApp\resources\ui\qtapp.si4project\qtapp.sip_xsb : File could not be opened.
+C:\Users\Sunjie2\FirstQtApp\resources\ui\qtapp.si4project\qtapp.sip_xsd : File could not be opened.

@@ -1,0 +1,12 @@
+#
+# hello module configuration
+#
+
+menu "Hello Module support"
+
+config HELLO
+	tristate "Include Hello module?"
+	---help---
+	  Linux Kernel Module demonstration - Hello
+
+endmenu

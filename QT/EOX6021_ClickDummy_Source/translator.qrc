@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>view/siemens/tr_de.qm</file>
+        <file>view/siemens/tr_en.qm</file>
+        <file>view/siemens/tr_zh.qm</file>
+    </qresource>
+</RCC>
