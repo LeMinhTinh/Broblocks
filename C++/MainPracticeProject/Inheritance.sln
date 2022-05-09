@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inheritance", "Inheritance\Inheritance.vcxproj", "{C728C33B-5D8E-43DA-A332-56C666092214}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MainLib", "MainLib\MainLib.vcxproj", "{C728C33B-5D8E-43DA-A332-56C666092214}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample-Test1", "Sample-Test1\Sample-Test1.vcxproj", "{02C49768-DE57-4E05-8DF8-5196AC98A5B5}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "test\test.vcxproj", "{02C49768-DE57-4E05-8DF8-5196AC98A5B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
