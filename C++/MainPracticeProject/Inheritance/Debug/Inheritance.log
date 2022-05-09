@@ -1,0 +1,9 @@
+﻿  stdafx.cpp
+  main.cpp
+  Person.cpp
+  Student.cpp
+  Teacher.cpp
+  Utils.cpp
+d:\bk\my_learn\broblocks\c++\oop\inheritance\inheritance\utils.cpp(12): warning C4244: '+=': conversion from 'double' to 'long', possible loss of data
+  Generating Code...
+  Inheritance.vcxproj -> D:\BK\My_Learn\Broblocks\C++\OOP\Inheritance\Debug\Inheritance.lib

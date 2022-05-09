@@ -28,7 +28,7 @@ void InOut(int &n)
 
 int main()
 {
-	/*SingletonDesign::Instance()->setData(12);
+	SingletonDesign::Instance()->setData(12);
 	cout << "This is Design Pattern Singleton: " << SingletonDesign::Instance()->getData() << endl;
 	auto a = SingletonDesign::Instance()->getData();
 	cout << "This is auto feature C11 plus plus: " << a << endl;
@@ -54,7 +54,7 @@ int main()
 	cout << "Name:" << em.GetNameData().c_str() << endl;
 	cout << "Position: " << em.GetPositionData().c_str() << endl;
 	cout << "Salary: " << em.getSalaryData()<<endl;
-*/
+
 	//shared_ptr<SmartPoiter> p1 = make_shared<SmartPoiter>("Nguyen Van A");
 	//p1->initFamily(p1->get());
 	//thread a;""
@@ -62,14 +62,14 @@ int main()
 	//Person1 p2 = p;
 	//cout<<p2.getAgeData();
 
-	LambdaExpression lm;
-	int arr[] = {2,3,1,7,9,5};
-	int n = sizeof(arr) / sizeof(arr[0]);
-	lm.SelectionSort(arr, n);
+	//LambdaExpression lm;
+	//int arr[] = {2,3,1,7,9,5};
+	//int n = sizeof(arr) / sizeof(arr[0]);
+	//lm.SelectionSort(arr, n);
+	////lm.PrintArray(arr, n);
+	//cout << "    " << endl;
+	//lm.BubleSort(arr, n);
 	//lm.PrintArray(arr, n);
-	cout << "    " << endl;
-	lm.BubleSort(arr, n);
-	lm.PrintArray(arr, n);
 	//lm.AutoFunction();
 	//cout<<"Giai Thua: "<<lm.TinhGiaiThua(4)<<endl;
 	//Thread *t3;
